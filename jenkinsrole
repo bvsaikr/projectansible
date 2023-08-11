@@ -13,6 +13,12 @@
     state: present
     key: https://jenkins-ci.org/redhat/jenkins-ci.org.key
 
+- name: upgrade yum
+  yum:
+   name: "*"
+   state: latest
+
+
 - name: install openjdk
   yum:
     name: java-1.8.0-openjdk
